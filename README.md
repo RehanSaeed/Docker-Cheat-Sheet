@@ -12,3 +12,11 @@ A cheat sheet for Docker commands.
 | `docker buildx create --name builder --driver docker-container --use`                                               | Create buildx instance           |
 | `docker buildx inspect --bootstrap`                                                                                 |                                  |
 | `docker buildx build --platform "linux/amd64,linux/arm64" --progress plain --tag test --file "C:\Foo\Dockerfile" .` | Build an image                   |
+
+## Redis
+
+```powershell
+docker run --name redis -p 6379:6379 -d --restart unless-stopped redis
+
+docker exec -it redis redis-cli
+```
