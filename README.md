@@ -23,6 +23,10 @@ docker exec -it redis redis-cli
 
 ## Jaeger
 
+- 55680 - OTLP receiver
+- 16686 - Dashboard
+- 13133 - Health Check
+
 ```powershell
-docker run --name jaeger -p 13133:13133 -p 16686:16686 -d --restart=unless-stopped jaegertracing/opentelemetry-all-in-one
+docker run --name jaeger -p 13133:13133 -p 16686:16686 -p 55680:55680 -d --restart=unless-stopped jaegertracing/opentelemetry-all-in-one
 ```
