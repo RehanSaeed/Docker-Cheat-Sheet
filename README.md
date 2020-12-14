@@ -16,7 +16,13 @@ A cheat sheet for Docker commands.
 ## Redis
 
 ```powershell
-docker run --name redis -p 6379:6379 -d --restart unless-stopped redis
+docker run --name redis -p 6379:6379 -d --restart=unless-stopped redis
 
 docker exec -it redis redis-cli
+```
+
+## Jaeger
+
+```powershell
+docker run --name jaeger -p 13133:13133 -p 16686:16686 -d --restart=unless-stopped jaegertracing/opentelemetry-all-in-one
 ```
